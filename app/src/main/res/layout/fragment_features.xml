@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:paddingBottom="110dp"
+    android:background="?android:colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="刷机工具箱"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?android:textColorPrimary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 全色盲开关 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/colorBlindSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+                <View android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="#FF9800" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="全色盲模式" android:textSize="16sp" android:textStyle="bold"
+                        android:textColor="?android:textColorPrimary"/>
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="开启后整个屏幕变为灰色"
+                        android:textSize="12sp" android:textColor="?android:textColorSecondary" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+                <TextView android:id="@+id/switchText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="关闭" android:textSize="14sp" android:textColor="#7C4DFF"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="18dp">
+                <View android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="#7C4DFF" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Bootloader解锁" android:textSize="16sp" android:textStyle="bold"
+                        android:textColor="?android:textColorPrimary"/>
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="小米/一加/三星解锁教程"
+                        android:textSize="12sp" android:textColor="?android:textColorSecondary" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="查看" android:textSize="14sp" android:textColor="#7C4DFF"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="18dp">
+                <View android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="#E91E63" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Magisk Root" android:textSize="16sp" android:textStyle="bold"
+                        android:textColor="?android:textColorPrimary"/>
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="获取Root权限，安装模块"
+                        android:textSize="12sp" android:textColor="?android:textColorSecondary" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="查看" android:textSize="14sp" android:textColor="#7C4DFF"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="18dp">
+                <View android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="#2196F3" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="线刷救砖" android:textSize="16sp" android:textStyle="bold"
+                        android:textColor="?android:textColorPrimary"/>
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="SP Flash Tool / Odin"
+                        android:textSize="12sp" android:textColor="?android:textColorSecondary" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="查看" android:textSize="14sp" android:textColor="#7C4DFF"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="18dp">
+                <View android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="#4CAF50" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="TWRP Recovery" android:textSize="16sp" android:textStyle="bold"
+                        android:textColor="?android:textColorPrimary"/>
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="第三方Recovery，卡刷ROM"
+                        android:textSize="12sp" android:textColor="?android:textColorSecondary" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="查看" android:textSize="14sp" android:textColor="#7C4DFF"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="18dp">
+                <View android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="#F44336" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="官方ROM下载" android:textSize="16sp" android:textStyle="bold"
+                        android:textColor="?android:textColorPrimary"/>
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="小米/三星/OPPO/vivo官方固件"
+                        android:textSize="12sp" android:textColor="?android:textColorSecondary" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="查看" android:textSize="14sp" android:textColor="#7C4DFF"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="18dp">
+                <View android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="#009688" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="第三方ROM" android:textSize="16sp" android:textStyle="bold"
+                        android:textColor="?android:textColorPrimary"/>
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="LineageOS / PixelExperience"
+                        android:textSize="12sp" android:textColor="?android:textColorSecondary" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="查看" android:textSize="14sp" android:textColor="#7C4DFF"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

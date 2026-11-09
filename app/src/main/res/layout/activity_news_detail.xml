@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="← 返回"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:padding="8dp"/>
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="36dp" android:layout_height="36dp"
+                    android:gravity="center" android:text="⌂"
+                    android:textSize="20dp" android:textColor="@color/text_primary"
+                    android:layout_marginEnd="12dp"/>
+                <TextView android:layout_width="36dp" android:layout_height="36dp"
+                    android:gravity="center" android:text="···"
+                    android:textSize="18dp" android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <!-- 新闻内容卡片 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_card"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:padding="20dp">
+                <TextView
+                    android:id="@+id/detailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="新闻标题"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:lineSpacingMultiplier="1.3"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:id="@+id/detailMeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="酷安社区 · 2小时前"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="16dp"/>
+                <TextView
+                    android:id="@+id/detailContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="新闻正文..."
+                    android:textSize="16sp"
+                    android:lineSpacingMultiplier="1.7"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <!-- 相关推荐卡片 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_card"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="相关推荐"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:id="@+id/relatedList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout android:id="@+id/rel1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:padding="10dp">
+                        <ImageView android:id="@+id/relImg1" android:layout_width="100dp" android:layout_height="75dp"
+                            android:background="@color/divider" android:layout_marginEnd="12dp" android:scaleType="centerCrop"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:id="@+id/relTitle1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="LineageOS 22正式发布，基于Android 16"
+                                android:textSize="14sp" android:textColor="@color/text_primary" android:maxLines="2"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ROM · 1天前" android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_marginTop="6dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/divider" android:layout_marginStart="112dp"/>
+
+                    <LinearLayout android:id="@+id/rel2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:padding="10dp">
+                        <ImageView android:id="@+id/relImg2" android:layout_width="100dp" android:layout_height="75dp"
+                            android:background="@color/divider" android:layout_marginEnd="12dp" android:scaleType="centerCrop"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:id="@+id/relTitle2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Magisk 27.0发布，支持Android 16"
+                                android:textSize="14sp" android:textColor="@color/text_primary" android:maxLines="2"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Root · 1天前" android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_marginTop="6dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/divider" android:layout_marginStart="112dp"/>
+
+                    <LinearLayout android:id="@+id/rel3" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:padding="10dp">
+                        <ImageView android:id="@+id/relImg3" android:layout_width="100dp" android:layout_height="75dp"
+                            android:background="@color/divider" android:layout_marginEnd="12dp" android:scaleType="centerCrop"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:id="@+id/relTitle3" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="小米15官方固件下载教程"
+                                android:textSize="14sp" android:textColor="@color/text_primary" android:maxLines="2"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="刷机 · 2天前" android:textSize="11sp" android:textColor="@color/text_secondary"
+                                android:layout_marginTop="6dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 评论区卡片 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_card"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新评论"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:id="@+id/commentList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+    <!-- 底部固定操作栏（悬浮） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_rounded_large"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom"
+        android:elevation="8dp">
+        <TextView
+            android:id="@+id/commentInput"
+            android:layout_width="0dp" android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input_border"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:text="写评论..."
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="💬" android:textSize="20dp" android:layout_marginStart="20dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="👍 107" android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginStart="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="↗" android:textSize="20dp"
+            android:textColor="@color/text_primary"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+</FrameLayout>

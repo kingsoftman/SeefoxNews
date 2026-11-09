@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_main">#121212</color>
+    <color name="bg_card">#1e1e1e</color>
+    <color name="text_primary">#ffffff</color>
+    <color name="text_secondary">#aaaaaa</color>
+    <color name="divider">#2c2c2c</color>
+    <color name="chip_bg">#2a2a2a</color>
+</resources>

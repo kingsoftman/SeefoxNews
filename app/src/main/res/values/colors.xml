@@ -1,0 +1,15 @@
+<resources>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 浅色主题 -->
+    <color name="bg_main">#F2F3F7</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#888888</color>
+    <color name="divider">#EEEEEE</color>
+    <color name="chip_bg">#F2F3F7</color>
+</resources>

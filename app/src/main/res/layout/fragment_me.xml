@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:paddingBottom="110dp"
+    android:background="@color/bg_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 用户信息卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/bg_card"
+            android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="20dp"
+                android:gravity="center_vertical">
+                <!-- 头像 -->
+                <FrameLayout
+                    android:id="@+id/avatarLayout"
+                    android:layout_width="72dp" android:layout_height="72dp">
+                    <View android:layout_width="72dp" android:layout_height="72dp"
+                        android:background="@drawable/bg_avatar"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_gravity="center" android:text="书"
+                        android:textSize="30sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                </FrameLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="16dp">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:id="@+id/nicknameText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="小书包" android:textSize="20sp" android:textStyle="bold"
+                            android:textColor="@color/text_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="  VIP" android:textSize="11sp"
+                            android:background="#FFD700" android:textColor="#5D4037"
+                            android:paddingStart="6dp" android:paddingEnd="6dp"
+                            android:paddingTop="2dp" android:paddingBottom="2dp"
+                            android:layout_marginStart="8dp"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ID: 88888888 · 已加入 328 天" android:textSize="12sp"
+                        android:textColor="@color/text_secondary" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 数据统计 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/bg_card"
+            android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="20dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="128" android:textSize="22sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="收藏" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="56" android:textSize="22sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="关注" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="2.3k" android:textSize="22sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="粉丝" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 深色模式卡片 -->
+        <!-- 功能列表 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/bg_card"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="  会员中心" android:padding="14dp" android:textSize="15sp"
+                    android:textColor="@color/text_primary"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="  我的收藏" android:padding="14dp" android:textSize="15sp"
+                    android:textColor="@color/text_primary"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="  浏览历史" android:padding="14dp" android:textSize="15sp"
+                    android:textColor="@color/text_primary"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="  意见反馈" android:padding="14dp" android:textSize="15sp"
+                    android:textColor="@color/text_primary"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="  设置" android:padding="14dp" android:textSize="15sp"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+
+    <!-- 搜索行：上滑时高度收缩隐藏，下拉时展开 -->
+    <LinearLayout
+        android:id="@+id/searchRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/bg_main"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/logoIv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:contentDescription="极安" />
+
+        <LinearLayout
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_search"
+            android:paddingStart="14dp"
+            android:paddingEnd="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="搜索刷机教程、应用、资源"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:tint="@color/text_secondary"
+                android:contentDescription="搜索" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 频道标签栏：固定不动 -->
+    <HorizontalScrollView
+        android:id="@+id/catScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false">
+        <LinearLayout
+            android:id="@+id/catBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/cat0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="推荐" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="#7C4DFF"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_cat_active"/>
+            <TextView android:id="@+id/cat1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="安卓刷机" android:textSize="15sp" android:textColor="@color/text_secondary"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/cat2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="手机数码" android:textSize="15sp" android:textColor="@color/text_secondary"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/cat3" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="应用推荐" android:textSize="15sp" android:textColor="@color/text_secondary"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/cat4" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="搞机教程" android:textSize="15sp" android:textColor="@color/text_secondary"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/cat5" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="资源下载" android:textSize="15sp" android:textColor="@color/text_secondary"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/homePager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
