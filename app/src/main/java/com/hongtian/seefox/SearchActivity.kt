@@ -72,10 +72,10 @@ class SearchActivity : AppCompatActivity() {
         adapter = SearchAdapter(results)
         rv.adapter = adapter
 
-        // 全量文章做本地搜索，不请求网络
-        val seen = mutableSetOf<Int>()
+        // 全量文章做本地搜索，不请求网络；两个源含同一篇文章时按标题去重
+        val seen = mutableSetOf<String>()
         allArticles = (SoftwareNewsData.latestArticles + SoftwareNewsData.hotArticles)
-            .filter { seen.add(it.id) }
+            .filter { seen.add(it.title) }
 
         et.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, a: Int, b: Int, c: Int) {}

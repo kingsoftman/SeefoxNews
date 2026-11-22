@@ -1,6 +1,6 @@
 # 极安 Seefox
 
-一个面向安卓刷机、玩机人群的资讯客户端。内容来自自建站点 `seesun.eu.org`，覆盖安卓刷机、手机数码、应用推荐、搞机教程、资源下载五个栏目，加上新闻中心。
+一个面向安卓刷机、玩机人群的资讯客户端。内容来自自建站点 `seesun.eu.org`（同一站点的备用域名 `seemoon.eu.org`），覆盖安卓刷机、手机数码、应用推荐、搞机教程、资源下载五个栏目，加上新闻中心。
 
 界面按「卡片 + 列表」的资讯流方式组织，深浅色完全跟随系统，附带后台定时检查 + 状态栏图文大图通知。
 
@@ -64,7 +64,9 @@
 | 用途 | 地址 |
 | --- | --- |
 | 最新发布 / 全站文章 | `https://seesun.eu.org/news.json` |
-| 今日热点（旧静态源） | `https://kingsoftman.github.io/soft-news/articles.json` |
+| 软件专区 / 应用推荐栏目 | `https://seemoon.eu.org/news.json` |
+
+`seemoon.eu.org` 与 `seesun.eu.org` 指向同一自建站点（同一份内容），后者为主域名，前者用于区分数据模块。软件专区只取该接口中 `category = 应用推荐` 的文章，两个数据源在客户端用不同 id 空间区分，合并展示时按标题去重。
 
 两个接口返回结构为 `{ "articles": [ { id, title, category, date, excerpt, cover, htmlContent } ] }`。
 
